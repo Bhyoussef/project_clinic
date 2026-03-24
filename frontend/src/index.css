@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #f8fafc;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.08), transparent 28%);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-slate-50 text-slate-900;
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8;
+  }
+
+  .surface-card {
+    @apply rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.25)];
+  }
+
+  .soft-card {
+    @apply rounded-[1.5rem] border border-slate-200/80 bg-white shadow-[0_16px_40px_-24px_rgba(15,23,42,0.18)];
+  }
+
+  .glass-dark {
+    @apply rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur;
+  }
+
+  .input-control {
+    @apply mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition duration-200 placeholder:text-slate-400 focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-300/60 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition duration-200 hover:-translate-y-0.5 hover:border-brand-500 hover:text-brand-700 hover:shadow-lg hover:shadow-slate-200/80;
+  }
+
+  .sidebar-button {
+    @apply w-full rounded-2xl px-4 py-4 text-left text-sm font-medium transition duration-200;
+  }
+
+  .data-table {
+    @apply min-w-full divide-y divide-slate-200 text-left;
+  }
+
+  .table-head-cell {
+    @apply px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500;
+  }
+
+  .table-row {
+    @apply transition duration-200 hover:bg-slate-50/80;
+  }
+
+  .status-badge {
+    @apply rounded-full border px-3 py-1 text-xs font-semibold capitalize;
+  }
+
+  .section-kicker {
+    @apply text-sm font-semibold uppercase tracking-[0.25em] text-brand-700;
+  }
+
+  .section-title {
+    @apply mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl;
+  }
+
+  .muted-copy {
+    @apply text-sm leading-6 text-slate-500;
+  }
+}
